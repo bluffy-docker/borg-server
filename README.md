@@ -1,6 +1,7 @@
 
 minimal borgserver
 
+https://github.com/bluffy-docker/borg-server
 # install
 
 Copy docker-compose
@@ -38,4 +39,7 @@ command="borg serve --restrict-to-path /backups/repo1 --append-only" ssh-rsa AAA
 
 # Create Repo Example
 
+```
 borg init --encryption=repokey  ssh://borg@localhost:2022/backups/reop1
+```
+
