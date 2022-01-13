@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  build:
+    container_name: borg-server
+    restart: always
+    image: cidb/borg-server:latest
+    volumes:
+      - './data/.ssh:/home/borg/.ssh'
+      - './data/backups:/backups'
+    ports:
+      - '2022:22'      

@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  build:
+    restart: always
+    image: docker-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './data/.ssh:/home/borg/.ssh'
+      - './data/backups:/backups'
+    ports:
+      - '2022:22'      
