@@ -3,7 +3,7 @@ services:
   build:
     container_name: borg-server
     restart: always
-    image: cidb/borg-server:latest
+    image: bluffy2006/borg-server:latest
     volumes:
       - './data/.ssh:/home/borg/.ssh'
       - './data/backups:/backups'
